@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eWre Musluk | Premium Musluk ve Batarya Sistemleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #dc2626;
+            --accent: #f59e0b;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --gradient: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            font-family: 'Kite One', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        .nav-menu li {
+            margin-left: 30px;
+            position: relative;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        .nav-menu a:hover:after {
+            width: 100%;
+        }
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f1f5f9"/><path d="M0 0L100 100" stroke="%23e2e8f0" stroke-width="1"/><path d="M100 0L0 100" stroke="%23e2e8f0" stroke-width="1"/></svg>');
+            background-size: cover;
+            position: relative;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hero-text {
+            flex: 1;
+            padding-right: 30px;
+        }
+        .hero-heading {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+        .hero-heading span {
+            color: var(--primary);
+        }
+        .hero-subheading {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 35px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+            transform: translateY(0);
+        }
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+            z-index: 1;
+        }
+        .btn:hover:before {
+            left: 100%;
+        }
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(37, 99, 235, 0.3);
+        }
+        .btn i {
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            margin-left: 15px;
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+		.hero-image {
+		flex: 1;
+		text-align: center;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 400px;
+		}
+		.hero-image img {
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
+		border-radius: 20px;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+		transition: transform 0.5s;
+		object-fit: contain;
+		}
+        .hero-image:hover img {
+            transform: scale(1.03);
+        }
+        .floating-shape {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: var(--gradient);
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.3;
+            animation: float 8s infinite ease-in-out;
+        }
+        .shape-1 {
+            top: -30px;
+            left: 50px;
+            width: 120px;
+            height: 120px;
+            animation-delay: 0s;
+        }
+        .shape-2 {
+            bottom: 20px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            animation-delay: 1s;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+        .products {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--gradient);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+        }
+        .products-slider {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        .products-slider-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 30px;
+            padding: 10px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            min-width: calc(33.333% - 20px);
+            flex: 0 0 auto;
+        }
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .product-image {
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        .product-info {
+            padding: 25px;
+        }
+        .product-info h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-size: 1.4rem;
+        }
+        .product-info p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 15px;
+        }
+        .slider-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+        }
+        .slider-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+        .slider-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .contact {
+            padding: 100px 0;
+            background: white;
+        }
+        .contact-container {
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            background: var(--gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-info:before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+        }
+        .contact-info:after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            bottom: -50px;
+            left: -50px;
+        }
+        .contact-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+        }
+        .contact-info p {
+            margin-bottom: 30px;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+        }
+        .contact-details {
+            margin-top: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .contact-details div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .contact-details i {
+            font-size: 20px;
+            color: var(--accent);
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .marketplace-section {
+            padding: 60px 0;
+            background: var(--light);
+            text-align: center;
+        }
+        .marketplace-title {
+            margin-bottom: 40px;
+        }
+        .marketplace-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .marketplace-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .marketplace-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        .marketplace-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: white;
+        }
+        .marketplace-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        .marketplace-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .marketplace-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: auto;
+        }
+        .marketplace-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+        .footer-column p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        .footer-column ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+        }
+        .footer-column ul li a i {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        .footer-column ul li a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+        .social-links {
+            display: flex;
+            margin-top: 25px;
+        }
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-right: 12px;
+            transition: all 0.3s;
+        }
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+        @media (max-width: 1200px) {
+            .hero-heading {
+                font-size: 3rem;
+            }
+            .product-card {
+                min-width: calc(50% - 15px);
+            }
+        }
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            .hero-buttons {
+                display: flex;
+                justify-content: center;
+            }
+            .contact-container {
+                flex-direction: column;
+            }
+            .product-card {
+                min-width: calc(50% - 15px);
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                background-color: white;
+                width: 100%;
+                flex-direction: column;
+                padding: 30px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transition: left 0.3s;
+                height: calc(100vh - 80px);
+                overflow-y: auto;
+            }
+            .nav-menu.active {
+                left: 0;
+            }
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero {
+                padding-top: 120px;
+            }
+            .hero-heading {
+                font-size: 2.5rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            .contact-info {
+                padding: 40px;
+            }
+            .product-card {
+                min-width: 280px;
+            }
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+            .hero-image img {
+                max-width: 90%; /* Mobilde biraz daha büyük */
+                max-height: 300px; /* Mobilde yükseklik ayarı */
+            }
+        }
+        @media (max-width: 576px) {
+            .hero-heading {
+                font-size: 2rem;
+            }
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            .product-card {
+                min-width: 250px;
+                padding: 25px 20px;
+            }
+            .contact-info {
+                padding: 30px 20px;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .hero-image img {
+                max-width: 95%; /* Çok küçük ekranlarda daha geniş */
+                max-height: 250px; /* Çok küçük ekranlarda yükseklik ayarı */
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="nav-container">
+            <div class="logo" id="logo-top">
+                eWre Musluk
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#products">Ürünler</a></li>
+                <li><a href="#marketplace">Online Satış</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-heading">Modern ve <span>Şık Musluk</span> Tasarımları</h1>
+                    <p class="hero-subheading">Evlerinize estetik ve kalite katacak premium musluk çözümleri. Suyun zarafetini yaşam alanlarınıza taşıyın.</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn">Ürünleri Keşfet <i class="fas fa-arrow-right"></i></a>
+                        <a href="#marketplace" class="btn btn-outline">Online Satın Al</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://raw.githubusercontent.com/eWreMusluk/eWreMusluk/refs/heads/main/image.jpg" alt="Premium Musluk">
+                    <div class="floating-shape shape-1"></div>
+                    <div class="floating-shape shape-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ürünler</h2>
+                <p>Şık ve fonksiyonel musluk çözümlerimizle yaşam alanlarınızı yenileyin.</p>
+            </div>
+            <div class="products-slider">
+                <div class="products-slider-container">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23f8fafc'/><circle cx='200' cy='120' r='50' fill='%232563eb'/><rect x='180' cy='120' width='40' height='120' fill='%23dc2626'/><path d='M160,240 L240,240 L230,300 L170,300 Z' fill='%23f59e0b'/></svg>" alt="Lavabo Musluğu">
+                        </div>
+                        <div class="product-info">
+                            <h3>Modern Lavabo Musluğu</h3>
+                            <p>Paslanmaz çelik, tek kollu, dayanıklı</p>
+                            <div class="product-price">
+                                <span>₺1.499</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23f8fafc'/><rect x='150' y='80' width='100' height='140' fill='%23dc2626'/><circle cx='200' cy='100' r='25' fill='%232563eb'/><circle cx='200' cy='160' r='25' fill='%232563eb'/><path d='M170,220 L230,220 L220,300 L180,300 Z' fill='%23f59e0b'/></svg>" alt="Duş Seti">
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium Duş Seti</h3>
+                            <p>Termostat kontrollü, 3 fonksiyonlu başlık</p>
+                            <div class="product-price">
+                                <span>₺3.299</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23f8fafc'/><rect x='170' y='100' width='60' height='140' fill='%23f59e0b'/><circle cx='200' cy='90' r='35' fill='%232563eb'/><path d='M180,240 L220,240 L210,300 L190,300 Z' fill='%23dc2626'/></svg>" alt="Mutfak Musluğu">
+                        </div>
+                        <div class="product-info">
+                            <h3>Mutfak Eviye Musluğu</h3>
+                            <p>360° dönebilen başlık, dayanıklı kaplama</p>
+                            <div class="product-price">
+                                <span>₺2.199</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23f8fafc'/><circle cx='200' cy='120' r='50' fill='%23f59e0b'/><rect x='180' cy='120' width='40' height='120' fill='%232563eb'/><path d='M160,240 L240,240 L230,300 L170,300 Z' fill='%23dc2626'/></svg>" alt="Altın Musluk">
+                        </div>
+                        <div class="product-info">
+                            <h3>Lüks Altın Kaplama Musluk</h3>
+                            <p>24 ayar altın kaplama, özel tasarım</p>
+                            <div class="product-price">
+                                <span>₺4.999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23f8fafc'/><rect x='150' y='80' width='100' height='140' fill='%23f59e0b'/><circle cx='200' cy='100' r='25' fill='%23dc2626'/><circle cx='200' cy='160' r='25' fill='%23dc2626'/><path d='M170,220 L230,220 L220,300 L180,300 Z' fill='%232563eb'/></svg>" alt="Duş Başlığı">
+                        </div>
+                        <div class="product-info">
+                            <h3>Yağmur Duş Başlığı</h3>
+                            <p>30 cm çap, 5 fonksiyonlu, krom kaplama</p>
+                            <div class="product-price">
+                                <span>₺1.899</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23f8fafc'/><rect x='170' y='100' width='60' height='140' fill='%23dc2626'/><circle cx='200' cy='90' r='35' fill='%23f59e0b'/><path d='M180,240 L220,240 L210,300 L190,300 Z' fill='%232563eb'/></svg>" alt="Batarya Seti">
+                        </div>
+                        <div class="product-info">
+                            <h3>Tam Batarya Seti</h3>
+                            <p>Lavabo, eviye và duş için uyumlu set</p>
+                            <div class="product-price">
+                                <span>₺5.499</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="marketplace-section" id="marketplace">
+        <div class="container">
+            <div class="section-title">
+                <h2>Online Satış Noktalarımız</h2>
+                <p>Ürünlerimize aşağıdaki online marketlerden kolayca ulaşabilirsiniz</p>
+            </div>
+            <div class="marketplace-grid">
+                <div class="marketplace-card">
+                    <div class="marketplace-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Trendyol</h3>
+                    <p>Trendyol mağazamızdan indirimli fiyatlarla ürünlerimize ulaşabilirsiniz.</p>
+                    <a href="#" class="marketplace-btn">Alışveriş Yap</a>
+                </div>
+                <div class="marketplace-card">
+                    <div class="marketplace-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Hepsiburada</h3>
+                    <p>Hepsiburada mağazamızda hızlı kargo ve güvenli alışveriş imkanı.</p>
+                    <a href="#" class="marketplace-btn">Alışveriş Yap</a>
+                </div>
+                <div class="marketplace-card">
+                    <div class="marketplace-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>n11</h3>
+                    <p>n11 mağazamızda özel kampanyalar ve taksit seçenekleriyle alışveriş yapın.</p>
+                    <a href="#" class="marketplace-btn">Alışveriş Yap</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>İletişim</h2>
+                <p>Bize ulaşın, size en uygun çözümleri sunalım</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Bizimle İletişime Geçin</h2>
+                    <p>Ürünlerimiz hakkında daha fazla bilgi almak veya özel siparişleriniz için bize ulaşabilirsiniz.</p>
+                    <div class="contact-details">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Güngören, İstanbul</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <p>+90 (534) 266 51 73</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <p>destek@ewremusluk.com</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-clock"></i>
+                            <p>Pazartesi - Cumartesi: 09:00 - 19:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>eWre Musluk</h3>
+                    <p>Kaliteli ve şık musluk çözümleri ile yaşam alanlarınıza değer katıyoruz.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ewremusluk" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/ewremusluk" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Ürünler</h3>
+                    <ul>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Lavabo Muslukları</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Duş Setleri</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Mutfak Muslukları</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Aksesuarlar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Online Satış</h3>
+                    <ul>
+                        <li><a href="#marketplace"><i class="fas fa-store"></i> Trendyol</a></li>
+                        <li><a href="#marketplace"><i class="fas fa-store"></i> Hepsiburada</a></li>
+                        <li><a href="#marketplace"><i class="fas fa-store"></i> n11</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>İletişim</h3>
+                    <ul>
+                        <li><a href="#contact"><i class="fas fa-map-marker-alt"></i> Güngören, İstanbul</a></li>
+                        <li><a href="#contact"><i class="fas fa-phone"></i> +90 (534) 266 51 73</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> destek@ewremusluk.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 eWre Musluk. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                extreme.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        const sliderContainer = document.querySelector('.products-slider-container');
+        const productCards = document.querySelectorAll('.product-card');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentPosition = 0;
+        let cardsPerView = Math.floor(sliderContainer.offsetWidth / (productCards[0].offsetWidth + 30));
+        const cardWidth = (productCards[0].offsetWidth + 30);
+        const maxPosition = -((productCards.length - cardsPerView) * cardWidth);
+        function updateSlider() {
+            sliderContainer.style.transform = `translateX(${currentPosition}px)`;
+            prevBtn.disabled = currentPosition >= 0;
+            nextBtn.disabled = currentPosition <= maxPosition;
+        }
+        prevBtn.addEventListener('click', () => {
+            if (currentPosition < 0) {
+                currentPosition += cardWidth * cardsPerView;
+                if (currentPosition > 0) currentPosition = 0;
+                updateSlider();
+            }
+        });
+        nextBtn.addEventListener('click', () => {
+            if (currentPosition > maxPosition) {
+                currentPosition -= cardWidth * cardsPerView;
+                if (currentPosition < maxPosition) currentPosition = maxPosition;
+                updateSlider();
+            }
+        });
+        window.addEventListener('resize', () => {
+            cardsPerView = Math.floor(sliderContainer.offsetWidth / (productCards[0].offsetWidth + 30));
+            const newMaxPosition = -((productCards.length - cardsPerView) * cardWidth);
+            if (currentPosition < newMaxPosition) {
+                currentPosition = newMaxPosition;
+            }
+            if (currentPosition > 0) {
+                currentPosition = 0;
+            }
+            updateSlider();
+        });
+        updateSlider();
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.product-card, .marketplace-card');
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                if (position < screenPosition) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        document.querySelectorAll('.product-card, .marketplace-card').forEach(element => {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'all 0.6s ease';
+        });
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        const backToTopButton = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        const logo = document.getElementById('logo-top');
+        logo.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
